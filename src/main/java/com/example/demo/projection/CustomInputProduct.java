@@ -1,5 +1,6 @@
 package com.example.demo.projection;
 
+import com.example.demo.entity.Input;
 import com.example.demo.entity.Product;
 import com.example.demo.entity.User;
 import org.springframework.beans.factory.annotation.Value;
@@ -18,8 +19,8 @@ public interface CustomInputProduct {
     Double getPrice();
 
     Date getExpireDate();
-    @Value("#{target.input.id}")
-    Integer getInputId();
+
+    Input getInput();
 
     String getCode();
 

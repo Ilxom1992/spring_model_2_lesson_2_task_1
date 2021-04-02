@@ -6,9 +6,12 @@ import org.springframework.data.rest.core.config.Projection;
 
 @Projection(types = Category.class)
 public interface CustomCategory {
+
     Integer getId();
+
     String getName();
-    @Value("#{target.parentCategory.id}")
-    Integer getParentCategoryId();
+
     boolean isActive();
+
+    Integer getParentCategory();
 }

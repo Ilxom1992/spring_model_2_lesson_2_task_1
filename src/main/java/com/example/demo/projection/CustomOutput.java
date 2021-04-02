@@ -1,5 +1,6 @@
 package com.example.demo.projection;
 
+import com.example.demo.entity.Client;
 import com.example.demo.entity.Output;
 import com.example.demo.entity.User;
 import org.springframework.beans.factory.annotation.Value;
@@ -11,16 +12,16 @@ public interface CustomOutput {
     Integer getId();
 
     String getDate();
-    @Value("#{target.warehouse.id}")
-    Integer getWarehouseId();
-    @Value("#{target.currency.id}")
-    Integer getCurrencyId();
+
+    Object getWarehouseId();
+
+    Object getCurrencyId();
 
     String getFactureNumber();
 
     Integer getCode();
-    @Value("#{target.client.id}")
-    Integer getClientId();
+
+    Client getClient();
 
 
 }

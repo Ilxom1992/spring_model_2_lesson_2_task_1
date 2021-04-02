@@ -1,6 +1,8 @@
 package com.example.demo.projection;
 
+import com.example.demo.entity.Category;
 import com.example.demo.entity.Product;
+import com.example.demo.entity.Supplier;
 import com.example.demo.entity.User;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.rest.core.config.Projection;
@@ -11,10 +13,10 @@ public interface CustomProduct {
     Integer getId();
 
     String getName();
-    @Value("#{target.category.id}")
-    Integer getCategoryId();
-    @Value("#{target.supplier.id}")
-    Integer getSupplierId();
+
+    Category getCategory();
+
+   Supplier getSupplier();
 
     Integer getFactureNumber();
 

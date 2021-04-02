@@ -11,15 +11,15 @@ import java.util.Date;
 @Projection(types = OutputProduct.class)
 public interface CustomOutputProduct {
     Integer getId();
-    @Value("#{target.product.id}")
-    Integer getProductId();
+
+    Object getProductId();
 
     Double getAmount();
 
     Double getPrice();
 
-    @Value("#{target.output.id}")
-    Integer getOutputId();
+
+   Object getOutput();
 
 
 

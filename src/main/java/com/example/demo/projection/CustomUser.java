@@ -16,7 +16,7 @@ public interface CustomUser {
 
     String getPhoneNumber();
 
-    String getCode();
+    Integer getCode();
 
     String getPassword();
 
